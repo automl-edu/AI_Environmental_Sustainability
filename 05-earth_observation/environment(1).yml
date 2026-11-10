@@ -1,0 +1,37 @@
+name: eo_seminar
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+
+  # PyTorch — conda handles CUDA/MPS variant selection automatically
+  - pytorch>=2.0.0
+  - torchvision>=0.15.0
+  - cpuonly          # remove this line if you have an NVIDIA GPU
+
+  # Core scientific stack
+  - numpy>=1.24.0
+  - matplotlib>=3.7.0
+  - scikit-learn>=1.3.0
+  - seaborn>=0.12.0
+  - pandas>=2.0.0
+
+  # Geospatial
+  - rasterio>=1.3.0
+  - geopandas
+
+  # Jupyter
+  - jupyterlab>=4.0.0
+  - ipykernel
+
+  # pip-only packages (not on conda-forge or need exact versions)
+  - pip:
+    - torchgeo>=0.6.0        # 0.6+ required for CopernicusBenchEuroSATS1/S2
+    - timm>=1.0.0
+    - transformers>=4.35.0
+    - huggingface_hub>=0.20.0
+    # optional — Prithvi-100M support (large install, ~150 MB extra deps)
+    # - terratorch>=1.2.0

@@ -1,0 +1,33 @@
+# Session 5 — Earth Observation & Geospatial Foundation Models
+# Install with: pip install -r requirements.txt
+#
+# PyTorch: install separately first for your platform from https://pytorch.org/get-started/locally/
+# e.g. CPU-only:   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# e.g. CUDA 12.4:  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# e.g. macOS MPS:  pip install torch torchvision  (default wheels include MPS)
+
+# Earth observation
+torchgeo>=0.6.0          # 0.6+ required for CopernicusBenchEuroSATS1/S2
+
+# Vision backbone and pretrained models
+timm>=1.0.0
+transformers>=4.35.0
+huggingface_hub>=0.20.0
+
+# Geospatial I/O
+rasterio>=1.3.0
+
+# Core scientific stack
+numpy>=1.24.0
+matplotlib>=3.7.0
+scikit-learn>=1.3.0
+seaborn>=0.12.0
+pandas>=2.0.0
+
+# Jupyter
+jupyterlab>=4.0.0
+ipykernel
+
+# Optional — Prithvi-100M via TerraTorch (large install, install separately)
+# KISSKI: TMPDIR=~/.local/pip_tmp pip install --user --no-cache-dir terratorch
+# Local:  pip install terratorch
